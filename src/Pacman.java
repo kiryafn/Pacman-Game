@@ -4,10 +4,9 @@ import java.io.IOException;
 
 public class Pacman extends Entity implements Moveable, Animable {
     Thread movingTimer;
-
     //direction
     static Coordinates toMove;
-    UpgradeEventHandling upgradeEventHandling;
+    UpgradeEventHandling upgradeEventHandling = new UpgradeEventHandling();
 
     public Pacman(int x, int y) {
         super(x, y);
@@ -30,7 +29,6 @@ public class Pacman extends Entity implements Moveable, Animable {
         updateMoving();
 
         //This is an object that will manage picking up upgrades
-        upgradeEventHandling = new UpgradeEventHandling();
 
     }
 
